@@ -6,7 +6,7 @@ UI Developers
 - Javani Anderson, Jonathan Lazarou
 
 Logic Developers
--Caeley Curtis, Fabrizio Lazo
+- Caeley Curtis, Fabrizio Lazo
 
 Administrative Role
--Harold Santos
+- Harold Santos
