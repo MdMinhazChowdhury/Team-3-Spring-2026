@@ -10,6 +10,16 @@ public:
 	Card() : suit(CLUBS), rank(ACE) {}  // default constructor
     Card(Suit suit, Rank rank) : suit(suit), rank(rank) {}  // constructor 
 
+	int GetSuit(Card card)
+	{
+	    return card.suit;
+	}
+	
+	int GetRank(Card card)
+	{
+	    return card.rank;
+	}
+
 private:
     Suit suit;
     Rank rank;
