@@ -16,16 +16,21 @@ public:
 	int bet()
 	{
 		int amount;
+		//Javani changed this for more robust input validation
 		std::cout << name << ", enter your bet amount: ";
-		std::cin >> amount;
-		if (amount > chips) {
-			std::cout << "You don't have enough chips to bet that amount. Please enter a valid amount." << std::endl;
-			return bet(); // Recursively ask for a valid amount
-		}
-		else 
-		{
-			chips -= amount; // Deduct the bet amount from the player's chips	
-		}
+		// Validate input: must be a number, > 0, and <= chips
+while (!(std::cin >> amount) || amount <= 0 || amount > chips) {
+    std::cout << "Invalid input. Enter a valid amount: ";
+    
+    // Clear error flags
+    std::cin.clear();
+    
+    // Ignore bad input
+    std::cin.ignore(1000, '\n');
+}
+
+chips -= amount; // Deduct the bet amount from the player's chips	
+		
 		return amount;
 	}
 
@@ -37,16 +42,21 @@ public:
 	int raise()
 	{
 		int amount;
-		std::cout << name << ", enter your raise amount: ";
-		std::cin >> amount;
-		if (amount > chips) {
-			std::cout << "You don't have enough chips to bet that amount. Please enter a valid amount." << std::endl;
-			return raise(); // Recursively ask for a valid amount
-		}
-		else
-		{
-			chips -= amount; // Deduct the bet amount from the player's chips	
-		}
+		//Javani changed this for more robust input validation
+		std::cout << name << ", enter your bet amount: ";
+		// Validate input: must be a number, > 0, and <= chips
+while (!(std::cin >> amount) || amount <= 0 || amount > chips) {
+    std::cout << "Invalid input. Enter a valid amount: ";
+    
+    // Clear error flags
+    std::cin.clear();
+    
+    // Ignore bad input
+    std::cin.ignore(1000, '\n');
+}
+
+chips -= amount; // Deduct the bet amount from the player's chips	
+		
 		return amount;
 	}
 	void fold() 
