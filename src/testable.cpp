@@ -5,7 +5,7 @@
 
 #pragma once
 
-int main() {
+int main_backup() {
 	Deck myDeck;
 	myDeck.Shuffle(); 
 	for (int i = 0; i < 52; ++i)	 {
@@ -16,7 +16,7 @@ int main() {
 	myDeck.~Deck(); // explicitly call the destructor to clear the deck
 
 
-	Human playerT("Alice", 123);
+	Human playerT("Alice", "123");
 
 	std::cout << "" << std::endl;
 	Deck myDeck2;
@@ -39,5 +39,6 @@ int main() {
 	myPot.addToPot(betAmount);
 	std::cout << "Total amount in the pot: " << myPot.getTotalAmount() << std::endl;
 
-	myPot.playersInPot[0] = playerT.getId();
+	return 0;
+	//myPot.playersInPot[0] = playerT.getId();
 }

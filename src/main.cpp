@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 
-int main() {
+int main_backup() {
     std::cout << "PokerSim test build running!" << std::endl;
 
     // Simple test: sort a vector
