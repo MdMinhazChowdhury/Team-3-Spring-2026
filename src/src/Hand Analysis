@@ -1,0 +1,46 @@
+#include "HandValue.h"
+#include "Card.cpp"
+
+#include <string>
+#include <map>
+struct HandAnalyzer {
+public:
+    std::string analyzeHand(Card cards[7]) {
+        std::map<int, int> rankCount;
+        // Check for flush
+        for (int suit = 0; suit < 4; suit++) {
+            int count = 0;
+
+            for (int j = 0; j < 7; j++) {
+                if (cards[j].GetSuit(cards[j]) == suit) {  // assumes suit is int (0–3)
+                    count++;
+                }
+            }
+
+            if (count >= 5) {
+                return "Flush";
+            }
+        }
+
+        // Count ranks
+        for (int i = 0; i < 7; i++) {
+            rankCount[cards[i].GetRank(cards[i])]++;
+        }
+
+
+        bool pair = false, three = false, four = false;
+
+        for (auto& r : rankCount) {
+            if (r.second == 4) four = true;
+            else if (r.second == 3) three = true;
+            else if (r.second == 2) pair = true;
+        }
+
+        if (four) return "Four of a Kind";
+        if (three && pair) return "Full House";
+        if (three) return "Three of a Kind";
+        if (pair) return "Pair";
+
+        return "High Card";
+    }
+};
