@@ -127,3 +127,15 @@ For Sprint 3, the following communications are anticipated:
 **Log Prepared By:** Fabrizio Lazo  
 **Date:** May 8, 2026  
 **Status:** Current - Updates pending for GUI team response
+
+**Log Update:** Javani Anderson
+**Date:** May 12, 2026  
+**Status:** Current - Updates  for GUI team complete
+
+- Performed GUI usability validation
+- Created GUITest.cpp for usability testing
+- Tested invalid input handling
+- Verified navigation workflow
+- Verified menu readability and user interaction flow
+- Tested backend response visibility through PokerGUI.cpp
+- Verified successful build and execution using CMake
